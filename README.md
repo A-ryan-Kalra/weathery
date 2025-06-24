@@ -9,7 +9,7 @@
 * source <directory-name>/bin/activate
 * pip freeze > requirements.txt
 
-Install necessary packages:
+#Install necessary packages:
 
 * pip install requests,Flask,python-dotenv
 * python3 server.py
