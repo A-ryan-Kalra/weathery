@@ -7,7 +7,10 @@ load_dotenv()
 
 
 def get_current_weather(city):
-    city = city or "uttar pradesh"
+    # city = city or "uttar pradesh"
+    if not bool(city.strip()):
+        city = "uttar pradesh"
+
     request_url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={os.getenv("API_KEY")}&units=metric"
     weather_data = requests.get(request_url).json()
 
